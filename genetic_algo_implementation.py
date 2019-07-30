@@ -33,9 +33,9 @@ def crossover(parents, offspring_size):
     crossover_point = numpy.uint8(offspring_size[1]/2)
 
     for k in range(offspring_size[0]):
-        parent1_idx = k%parents.shape[0]
+        parent1_idx = k%parents.shape[0]
         parent2_idx = (k+1)%parents.shape[0]
-        offspring[k, 0:crossover_point] = parents[parent1_idx, 0:crossover_point]
+        offspring[k, 0:crossover_point] = parents[parent1_idx, 0:crossover_point]
         offspring[k, crossover_point:] = parents[parent2_idx, crossover_point:]
     return offspring
 
